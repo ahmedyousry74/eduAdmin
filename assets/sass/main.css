@@ -312,25 +312,27 @@ aside .logout__ button path {
   margin-top: 50px;
 }
 .dt-container .search_ {
-  display: none;
+  display: flex;
   justify-content: flex-end;
+  padding: 0;
+  margin-bottom: 25px;
 }
 .dt-container .search_ input {
   padding: 4px 25px !important;
   background: #fff;
-  border: 0 !important;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid #DBDBDB;
   height: 40px;
   width: 200px;
 }
 .dt-container .length_ {
-  display: none;
+  display: flex;
+  padding: 0;
+  margin-bottom: 25px;
 }
 .dt-container .length_ select.dt-input {
   padding: 4px 15px;
   background: #fff;
-  border: 0;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 1px solid #DBDBDB;
   height: 40px;
 }
 .dt-container .table_layout {
