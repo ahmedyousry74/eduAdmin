@@ -1,6 +1,6 @@
 .dt-container {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
 
     .search_ {
         display: flex;
@@ -10,9 +10,13 @@
         input {
             padding: 4px 25px !important;
             background: #fff;
-            border: 1px solid $fourth-color;
+            border: 1px solid $fourth-color !important;
             height: 40px;
             width: 200px;
+            color: $primary-color;
+            font-size: 14px;
+            padding-inline-start: 10px !important;
+            border-radius: 4px;
         }
     }
 
@@ -25,6 +29,10 @@
             background: #fff;
             border: 1px solid $fourth-color;
             height: 40px;
+            border-radius: 4px;
+            color: $primary-color;
+            font-size: 14px;
+            padding-inline-start: 10px !important;
         }
     }
 

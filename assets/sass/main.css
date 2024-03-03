@@ -309,7 +309,7 @@ aside .logout__ button path {
 
 .dt-container {
   width: 100%;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 .dt-container .search_ {
   display: flex;
@@ -320,9 +320,13 @@ aside .logout__ button path {
 .dt-container .search_ input {
   padding: 4px 25px !important;
   background: #fff;
-  border: 1px solid #DBDBDB;
+  border: 1px solid #DBDBDB !important;
   height: 40px;
   width: 200px;
+  color: #050505;
+  font-size: 14px;
+  padding-inline-start: 10px !important;
+  border-radius: 4px;
 }
 .dt-container .length_ {
   display: flex;
@@ -334,6 +338,10 @@ aside .logout__ button path {
   background: #fff;
   border: 1px solid #DBDBDB;
   height: 40px;
+  border-radius: 4px;
+  color: #050505;
+  font-size: 14px;
+  padding-inline-start: 10px !important;
 }
 .dt-container .table_layout {
   border: 1px solid #EAECF0;
@@ -594,7 +602,7 @@ aside .logout__ button path {
   background: #fff;
   border: 1px solid #DBDBDB;
   padding: 8px 25px;
-  border-radius: 6px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
