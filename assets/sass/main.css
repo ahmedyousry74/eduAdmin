@@ -447,6 +447,10 @@ aside .logout__ button path {
 .dt-container .table_layout .status.not_pay::before {
   background-color: #C87F13;
 }
+.dt-container .table_layout .name_ a {
+  color: #636363 !important;
+  text-decoration: none !important;
+}
 .dt-container .dt-info {
   margin-top: 25px;
 }
@@ -613,4 +617,126 @@ aside .logout__ button path {
   font-weight: 600;
   text-decoration: none;
   height: 40px;
+}
+
+.tabs__form ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.tabs__form ul li button {
+  background-color: transparent;
+  border: 0;
+  color: #050505 !important;
+  font-size: 15px;
+  font-weight: 400;
+}
+.tabs__form ul li button.active {
+  background-color: #DA3837 !important;
+  color: #fff !important;
+}
+.tabs__form .form__details {
+  margin-top: 35px;
+}
+.tabs__form .form__details h2 {
+  color: #050505;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.tabs__form .form__details .file__zone {
+  gap: 5px;
+  position: relative;
+  border: 1px solid #d0d5dd !important;
+  border-radius: 8px !important;
+  padding: 16px;
+}
+.tabs__form .form__details .file__zone input {
+  width: 100%;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+.tabs__form .form__details .file__zone span {
+  color: #475467;
+  font-size: 14px;
+  font-weight: 400;
+}
+.tabs__form .form__details .file__zone span span {
+  color: #52911b;
+  font-weight: 700;
+}
+.tabs__form .form__details .file__zone p {
+  color: #475467;
+  font-size: 12px;
+  font-weight: 400;
+}
+.tabs__form .form__details .input_form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 35px;
+}
+.tabs__form .form__details .input_form label {
+  color: #050505;
+  font-size: 15px;
+  font-weight: 500;
+}
+.tabs__form .form__details .input_form input,
+.tabs__form .form__details .input_form select {
+  border-radius: 4px;
+  height: 40px !important;
+  border-color: #DBDBDB;
+  font-size: 14px;
+  color: #050505;
+  font-size: 14px;
+  color: #050505;
+}
+.tabs__form .form__details .input_form input:focus,
+.tabs__form .form__details .input_form select:focus {
+  box-shadow: none;
+  border-color: #DBDBDB;
+}
+.tabs__form .form__details .input_form input option,
+.tabs__form .form__details .input_form select option {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #050505;
+}
+.tabs__form .form__details .input_form input::-moz-placeholder, .tabs__form .form__details .input_form select::-moz-placeholder {
+  font-size: 14px;
+  color: #050505;
+}
+.tabs__form .form__details .input_form input::placeholder,
+.tabs__form .form__details .input_form select::placeholder {
+  font-size: 14px;
+  color: #050505;
+}
+.tabs__form .form__details .btn__save {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.tabs__form .form__details .btn__save button {
+  background: #DA3837;
+  border: 1px solid #DA3837;
+  padding: 8px 35px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  height: 48px;
 }/*# sourceMappingURL=main.css.map */
