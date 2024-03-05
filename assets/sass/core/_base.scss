@@ -196,8 +196,41 @@ input:focus::-moz-placeholder {
     -webkit-transition: 0.4s;
     transition: 0.4s;
 }
+input[type="checkbox"]:checked {
+    background-color: $second-color;
+    color: $second-color;
+    border-color: $second-color;
+}
 /////////////////////////////////
 .wrraper_page{
     padding: 15px 25px;
     gap: 32px;
+}
+#pills-files{
+    .add_file_btn{
+        border: 1px solid $fourth-color;
+        padding: 8px 25px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        height: 48px;
+        text-decoration: none;
+        background-color: $second-color;
+        color: $third-color;
+        border-color: $third-color;
+        margin-bottom: 25px;
+        path{
+            color: $third-color !important;
+            fill: $third-color !important;
+        }
+    }
+    .add_file{
+        display: none;
+    }
 }
