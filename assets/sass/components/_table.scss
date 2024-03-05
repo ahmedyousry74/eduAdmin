@@ -35,142 +35,6 @@
             padding-inline-start: 10px !important;
         }
     }
-
-    .table_layout {
-        border: 1px solid #EAECF0;
-        border-radius: 7px;
-        padding: 0;
-
-        table {
-            thead {
-                background: #F9FAFB;
-                border-radius: 7px;
-
-                th {
-                    border-bottom: 1px solid #EAECF0;
-                    text-align: start;
-                    color: $fifth-color;
-                    font-size: 14px;
-                    font-weight: 600;
-
-                    &:hover {
-                        outline: 0 !important;
-                        border: 0 !important;
-                        border-bottom: 1px solid #EAECF0 !important;
-                    }
-
-                    &:first-of-type {
-                        border-radius: 0 7px 0 0;
-                    }
-
-                    &:last-of-type {
-                        border-radius: 7px 0 0 0;
-                    }
-                }
-            }
-
-            tbody {
-                background: #F9FAFB;
-
-                tr {
-                    &:nth-child(odd) td {
-                        background-color: #fff !important;
-                        ;
-                        box-shadow: none !important;
-
-                        &:hover {
-                            background-color: #fff !important;
-                            ;
-                        }
-                    }
-
-                    &:nth-child(even) td {
-                        background-color: #F9FAFB !important;
-                        ;
-
-                        &:hover {
-                            background-color: #F9FAFB !important;
-                            box-shadow: none !important;
-                        }
-                    }
-
-                    &:hover {
-                        &:nth-child(even) td {
-                            background-color: #F9FAFB !important;
-                            box-shadow: none !important;
-                        }
-                    }
-                }
-
-                td {
-                    border-bottom: 1px solid #EAECF0;
-                    padding: 10px;
-                    color: $fifth-color;
-                    font-size: 14px;
-                    font-weight: 500;
-                }
-            }
-
-            .sorting_1 {
-                box-shadow: none !important;
-            }
-        }
-
-        .status {
-            width: 90px !important;
-            border-radius: 16px;
-            padding: 5px 8px;
-            display: block;
-            text-align: center;
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 12px;
-                right: 9px;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background-color: #027A48;
-            }
-
-            &.active {
-                background-color: #ECFDF3;
-                color: #027A48;
-                &::before {
-                    background-color: #027A48;
-                }
-            }
-            &.stopped {
-                background-color: #FFF1F3;
-                color: #E02D3C;
-                &::before {
-                    background-color: #E02D3C;
-                }
-            }
-            &.disconnected {
-                background-color: #AFC4EB;
-                color: #2A59B0;
-                &::before {
-                    background-color: #2A59B0;
-                }
-            }
-            &.not_pay {
-                background-color: #EBD3AF;
-                color: #C87F13;
-                &::before {
-                    background-color: #C87F13;
-                }
-            }
-        }
-        .name_{
-            a{
-                color: $fifth-color !important;
-                text-decoration: none !important;
-            }
-        }
-    }
     .dt-info{
         margin-top: 25px
     }
@@ -191,5 +55,140 @@
     .sorting_desc:before {
         content: '\2191\2193';
         padding-left: 5px;
+    }
+}
+.table_layout {
+    border: 1px solid #EAECF0;
+    border-radius: 7px;
+    padding: 0;
+
+    table {
+        thead {
+            background: #F9FAFB;
+            border-radius: 7px;
+
+            th {
+                border-bottom: 1px solid #EAECF0;
+                text-align: start;
+                color: $fifth-color;
+                font-size: 14px;
+                font-weight: 600;
+
+                &:hover {
+                    outline: 0 !important;
+                    border: 0 !important;
+                    border-bottom: 1px solid #EAECF0 !important;
+                }
+
+                &:first-of-type {
+                    border-radius: 0 7px 0 0;
+                }
+
+                &:last-of-type {
+                    border-radius: 7px 0 0 0;
+                }
+            }
+        }
+
+        tbody {
+            background: #F9FAFB;
+
+            tr {
+                &:nth-child(odd) td {
+                    background-color: #fff !important;
+                    ;
+                    box-shadow: none !important;
+
+                    &:hover {
+                        background-color: #fff !important;
+                        ;
+                    }
+                }
+
+                &:nth-child(even) td {
+                    background-color: #F9FAFB !important;
+                    ;
+
+                    &:hover {
+                        background-color: #F9FAFB !important;
+                        box-shadow: none !important;
+                    }
+                }
+
+                &:hover {
+                    &:nth-child(even) td {
+                        background-color: #F9FAFB !important;
+                        box-shadow: none !important;
+                    }
+                }
+            }
+
+            td {
+                border-bottom: 1px solid #EAECF0;
+                padding: 10px;
+                color: $fifth-color;
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .sorting_1 {
+            box-shadow: none !important;
+        }
+    }
+
+    .status {
+        width: 90px !important;
+        border-radius: 16px;
+        padding: 5px 8px;
+        display: block;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #027A48;
+        }
+
+        &.active {
+            background-color: #ECFDF3;
+            color: #027A48;
+            &::before {
+                background-color: #027A48;
+            }
+        }
+        &.stopped {
+            background-color: #FFF1F3;
+            color: #E02D3C;
+            &::before {
+                background-color: #E02D3C;
+            }
+        }
+        &.disconnected {
+            background-color: #AFC4EB;
+            color: #2A59B0;
+            &::before {
+                background-color: #2A59B0;
+            }
+        }
+        &.not_pay {
+            background-color: #EBD3AF;
+            color: #C87F13;
+            &::before {
+                background-color: #C87F13;
+            }
+        }
+    }
+    .name_{
+        a{
+            color: $fifth-color !important;
+            text-decoration: none !important;
+        }
     }
 }
