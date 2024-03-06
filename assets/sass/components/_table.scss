@@ -192,3 +192,12 @@
         }
     }
 }
+.operations{
+    button{
+        background-color: transparent;
+        border: 0;
+        margin: 0 5px;
+        color: $primary-color;
+        font-weight: 600;
+    }
+}

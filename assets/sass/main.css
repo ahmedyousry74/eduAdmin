@@ -505,6 +505,14 @@ aside .logout__ button path {
   text-decoration: none !important;
 }
 
+.operations button {
+  background-color: transparent;
+  border: 0;
+  margin: 0 5px;
+  color: #050505;
+  font-weight: 600;
+}
+
 .header__dahsboard {
   border-bottom: 1px solid #DBDBDB;
   padding-bottom: 35px;
