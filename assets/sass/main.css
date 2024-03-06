@@ -574,6 +574,7 @@ aside .logout__ button path {
   font-weight: 600;
   text-decoration: none;
   height: 48px;
+  transition: 0.3s ease-in-out all;
 }
 .header__page .actions_page button.add_student, .header__page .actions_page a.add_student {
   background-color: #DA3837;
@@ -583,6 +584,32 @@ aside .logout__ button path {
 .header__page .actions_page button.add_student path, .header__page .actions_page a.add_student path {
   color: #F9FAFB !important;
   fill: #F9FAFB !important;
+}
+.header__page .actions_page button.operation_, .header__page .actions_page a.operation_ {
+  position: relative;
+}
+.header__page .actions_page button.operation_:hover, .header__page .actions_page a.operation_:hover {
+  background-color: #DA3837;
+  color: #F9FAFB;
+  border-color: #F9FAFB;
+}
+
+.operations__btns {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: -moz-max-content;
+  width: max-content;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 3px 15px;
+  border-radius: 4px;
+}
+.operations__btns button {
+  border: 0 !important;
+  padding: 0 !important;
+  font-size: 13px !important;
 }
 
 .filter__action {

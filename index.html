@@ -327,6 +327,14 @@
           <div
             class="actions_page d-flex justify-content-start align-otems-center flex-row gap-2 flex-wrap"
           >
+            <div class="position-relative">
+              <button class="operation_">
+                <span>عمليات</span>
+              </button>
+              <section class="operations__btns">
+                <button> نقل الى مرحلة جديدة </button>
+              </section>
+            </div>
             <button>
               <img
                 src="./assets/images/printer.svg"
@@ -573,5 +581,26 @@
         $(".dataTables_length select").addClass("form-select");
       });
     </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const operationBtn = document.querySelector('.operation_');
+          const operationsBtns = document.querySelector('.operations__btns');
+        
+          // Show/Hide operations__btns when clicking operation_ button
+          operationBtn.addEventListener('click', function(event) {
+            operationsBtns.style.display = (operationsBtns.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+          });
+        
+          // Hide operations__btns when clicking outside of it
+          document.addEventListener('click', function(event) {
+            const isClickInside = operationsBtns.contains(event.target) || operationBtn.contains(event.target);
+            if (!isClickInside) {
+              operationsBtns.style.display = 'none';
+            }
+          });
+        });
+      </script>
   </body>
 </html>

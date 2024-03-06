@@ -35,6 +35,7 @@
             font-weight: 600;
             text-decoration: none;
             height: 48px;
+            transition: 0.3s ease-in-out all;
             &.add_student{
                 background-color: $second-color;
                 color: $third-color;
@@ -44,6 +45,30 @@
                     fill: $third-color !important;
                 }
             }
+            &.operation_{
+                position: relative;
+                &:hover{
+                    background-color: $second-color;
+                    color: $third-color;
+                    border-color: $third-color;
+                }
+            }
         }
+    }
+}
+.operations__btns{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: max-content;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 3px 15px;
+    border-radius: 4px;
+    button{
+        border: 0 !important;
+        padding: 0 !important;
+        font-size: 13px !important;
     }
 }
