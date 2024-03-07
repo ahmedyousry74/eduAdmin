@@ -348,62 +348,69 @@
           <div class="tabs__form w-100">
             <div class="form__details w-100">
                 <form action="" class="">
-                    <h2> تعديل البيانات </h2>
                   <div class="row">
-                    <div class="col-md-6">
-                        <div class="input_form mt-2">
-                            <label for=""> الاسم </label>
-                            <input type="text" class="form-control" placeholder="الاسم">
+                    <h2>تعديل كتاب
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="input_form mt-2">
+                                <label for=""> اسم الكتاب </label>
+                                <input type="text" class="form-control" placeholder="اسم الكتاب">
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="input_form mt-2">
-                            <label for=""> التكلفة </label>
-                            <input type="text" class="form-control" placeholder="">
+                        <div class="col-md-6">
+                          <div class="input_form">
+                            <label for=""> المرحلة </label>
+                            <select
+                              name="gender"
+                              id="gender"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>المرحلة</option>
+                              <option value="">مرحلة 1</option>
+                              <option value="">مرحلة 2</option>
+                            </select>
+                          </div>
                         </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label for="" class="mb-2"> الصورة </label>
-                        <div class="file__zone d-flex justify-content-center align-items-center flex-column mb-4"
-                                style="gap: 8px">
-                            <input class="form-control" type="file" id="formFile">
-                            <img src="../../assets/images/down.svg" alt="download" alt="download"
-                                    loading="lazy" width="40" height="40"/>
-                            <span> اضغط او قم بالسحب </span>
-                            <p>png, jpg, jpeg (max. 800x400px)</p>
+                        <div class="col-md-12">
+                          <div class="input_form">
+                            <label for=""> المادة </label>
+                            <select
+                              name="gender"
+                              id="gender"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>المادة</option>
+                              <option value="">مادة 1</option>
+                              <option value="">مادة 2</option>
+                            </select>
+                          </div>
                         </div>
+                        <div class="col-md-6">
+                            <label for="" class="mb-2"> صورة الكتاب </label>
+                            <div class="file__zone d-flex justify-content-center align-items-center flex-column mb-4"
+                                    style="gap: 8px">
+                                <input class="form-control" type="file" id="formFile">
+                                <img src="../../assets/images/down.svg" alt="download" alt="download"
+                                        loading="lazy" width="40" height="40"/>
+                                <span> اضغط او قم بالسحب </span>
+                                <p>png, jpg, jpeg (max. 800x400px)</p>
+                            </div>
+                          </div>
+                        <div class="col-md-6">
+                            <label for="" class="mb-2"> الكتاب </label>
+                            <div class="file__zone d-flex justify-content-center align-items-center flex-column mb-4"
+                                    style="gap: 8px">
+                                <input class="form-control" type="file" id="formFile">
+                                <img src="../../assets/images/down.svg" alt="download" alt="download"
+                                        loading="lazy" width="40" height="40"/>
+                                <span> اضغط او قم بالسحب </span>
+                                <p>png, jpg, jpeg (max. 800x400px)</p>
+                            </div>
+                          </div>
+                      <div class="btn__save">
+                        <button>حفظ</button>
                       </div>
-                      <div class="col-md-6">
-                        <div class="input_form">
-                          <label for=""> المرحلة </label>
-                          <select
-                            name="gender"
-                            id="gender"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>المرحلة</option>
-                            <option value="">مرحلة 1</option>
-                            <option value="">مرحلة 2</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="input_form">
-                          <label for=""> المدرسة </label>
-                          <select
-                            name="gender"
-                            id="gender"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>المدرسة</option>
-                            <option value="">مدرسة 1</option>
-                            <option value="">مدرسة 2</option>
-                          </select>
-                        </div>
-                      </div>
-                  <div class="btn__save">
-                    <button>حفظ</button>
-                  </div>
                 </form>
             </div>
           </div>
