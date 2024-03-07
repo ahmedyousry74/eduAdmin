@@ -345,115 +345,36 @@
             </a>
           </div>
         </div>
-        <div
-          class="header__page d-flex justify-content-between align-items-start flex-row flex-wrap w-100"
-        >
-          <div class="title_page">
-            <h2>المواد</h2>
-            <nav>
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href=""><i class="mdi mdi-home-outline"></i> الرئيسية </a>
-                </li>
-                <li class="breadcrumb-item" aria-current="page">
-                  القسم العلمي
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  المواد 
-                </li>
-              </ol>
-            </nav>
+          <div class="tabs__form w-100">
+            <div class="form__details w-100">
+                <form action="" class="">
+                  <div class="row">
+                    <h2>إضافة مرحلة دراسية
+                    </h2>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="input_form">
+                                <label for=""> اسم المرحلة الدراسية </label>
+                                <input type="text" class="form-control" placeholder="اسم الكتاب">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <label for="" class="mb-2"> الصورة </label>
+                            <div class="file__zone d-flex justify-content-center align-items-center flex-column mb-4"
+                                    style="gap: 8px">
+                                <input class="form-control" type="file" id="formFile">
+                                <img src="../../assets/images/down.svg" alt="download" alt="download"
+                                        loading="lazy" width="40" height="40"/>
+                                <span> اضغط او قم بالسحب </span>
+                                <p>png, jpg, jpeg (max. 800x400px)</p>
+                            </div>
+                          </div>
+                      <div class="btn__save">
+                        <button>حفظ</button>
+                      </div>
+                </form>
+            </div>
           </div>
-          <div
-            class="actions_page d-flex justify-content-start align-otems-center flex-row gap-2 flex-wrap"
-          >
-            <button>
-              <img
-                src="../../assets/images/printer.svg"
-                alt="print"
-                width="20"
-                height="20"
-                loading="lazy"
-              />
-              <span>طباعة</span>
-            </button>
-            <button>
-              <img
-                src="../../assets/images/file.svg"
-                alt="print"
-                width="20"
-                height="20"
-                loading="lazy"
-              />
-              <span> تصدير إلى PDF </span>
-            </button>
-            <button>
-              <img
-                src="../../assets/images/download-cloud.svg"
-                alt="print"
-                width="20"
-                height="20"
-                loading="lazy"
-              />
-              <span> إستيراد </span>
-            </button>
-            <a href="/practical-section/materials/add.html" class="add_student">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                color="#fff"
-                fill="#fff"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 5V19M5 12H19"
-                  color="#fff"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <span> إضافة مادة </span>
-            </a>
-          </div>
-        </div>
-        <table id="example" class="display" style="width: 100%">
-          <thead>
-            <tr>
-              <th>تحديد</th>
-              <th>الرقم</th>
-              <th>الصورة</th>
-              <th>الإسم</th>
-              <th>المرحلة الدراسية</th>
-              <th>إجراء</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="checkbox" /></td>
-              <td>1</td>
-              <td>
-                <img
-                  src="../../assets/images/avatar.png"
-                  alt="avatar"
-                  height="80"
-                  width="80"
-                />
-              </td>
-              <td class="name_">
-                <a href="/practical-section/materials/edit.html">
-                  مادة 1
-                </a>
-              </td>
-              <td>المرحلة الثانية</td>
-              <td class="actions">
-                <button > <img src="/assets/images/trash.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
 
@@ -461,33 +382,5 @@
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/datatable.js"></script>
 
-    <script>
-      $(document).ready(function () {
-        var table = $("#example").DataTable({
-          dom:
-            "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
-            "<'row'<'col-sm-12 table_layout'tr>>" +
-            "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
-          lengthMenu: [
-            [5, 10, 25, 50, -1],
-            [5, 10, 25, 50, "All"],
-          ],
-          responsive: true,
-          language: {
-            search: "_INPUT_",
-            searchPlaceholder: "بحث",
-            lengthMenu: "_MENU_",
-            paginate: {
-              first: "الأول",
-              last: "الأخير",
-              next: "التالي",
-              previous: "السابق",
-            },
-          },
-        });
-        $(".dataTables_filter input").addClass("form-control");
-        $(".dataTables_length select").addClass("form-select");
-      });
-    </script>
   </body>
 </html>
