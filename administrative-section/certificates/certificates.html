@@ -215,7 +215,244 @@
         </button>
       </div>
     </aside>
+    <div
+    class="wrraper_page d-flex justify-content-start align-items-start flex-column w-100"
+  >
+    <div
+      class="header__dahsboard d-flex justify-content-between flex-row align-items-center w-100 flex-wrap gap-2"
+    >
+      <div
+        class="right__btns d-flex justify-content-start flex-row align-items-center"
+      >
+        <a href="">
+          <img
+            src="../../assets/images/message.svg"
+            alt="chat"
+            width="23"
+            height="23"
+            loading="lazy"
+          />
+        </a>
+        <a href="">
+          <img
+            src="../../assets/images/mail.svg"
+            alt="chat"
+            width="23"
+            height="23"
+            loading="lazy"
+          />
+        </a>
+        <a href="">
+          <img
+            src="../../assets/images/task.svg"
+            alt="chat"
+            width="23"
+            height="23"
+            loading="lazy"
+          />
+        </a>
+      </div>
+      <div
+        class="left__btns d-flex justify-content-start flex-row align-items-center"
+      >
+        <a href="">
+          <img
+            src="../../assets/images/mirroring-screen.svg"
+            alt="chat"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+        </a>
+        <div class="input-group">
+          <span class="input-group-text" id="basic-addon1">
+            <img src="../../assets/images/search-md.svg" alt="search" width="20" height="20" loading="lazy"/>
+          </span>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="بحث"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+        <a href="">
+          <img
+            src="../../assets/images/notification.svg"
+            alt="chat"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+        </a>
+        <a href="">
+          <img
+            src="../../assets/images/profile.svg"
+            alt="chat"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+        </a>
+        <a href="">
+          <img
+            src="../../assets/images/setting.svg"
+            alt="chat"
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+        </a>
+      </div>
     </div>
-    </body>
-    </html>
-    
+    <div
+      class="header__page d-flex justify-content-between align-items-start flex-row flex-wrap w-100"
+    >
+      <div class="title_page">
+        <h2>الشهادات</h2>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href=""><i class="mdi mdi-home-outline"></i> الرئيسية </a>
+            </li>
+            <li class="breadcrumb-item" aria-current="page">
+              القسم الإداري
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              الشهادات
+            </li>
+          </ol>
+        </nav>
+      </div>
+      <div
+        class="actions_page d-flex justify-content-start align-otems-center flex-row gap-2 flex-wrap"
+      >
+        <a href="./add-form.html"> إضافة نموذج </a>
+        <a href="./add-cetificate.html" class="add_student">
+          <span> إضافة شهادة </span>
+        </a>
+      </div>
+    </div>
+    <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
+      <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
+        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+          <label for=""> اسم الطالب </label>
+          <select
+            name="schools"
+            id="schools"
+            class="form-select form-control"
+          >
+            <option selected disabled>اسم الطالب</option>
+            <option value="">طالب 1</option>
+            <option value="">طالب 2</option>
+            <option value="">طالب 3</option>
+            <option value="">طالب 4</option>
+          </select>
+        </div>
+        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+          <label for=""> اسم النموذج </label>
+          <select
+            name="schools"
+            id="schools"
+            class="form-select form-control"
+          >
+            <option selected disabled>اسم النموذج</option>
+            <option value="">نموذج 1</option>
+            <option value="">نموذج 2</option>
+            <option value="">نموذج 3</option>
+            <option value="">نموذج 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="filter_btn">
+        <button type="submit"> فلتر </button>
+      </div>
+    </form>
+      <table id="example" class="display" style="width: 100%">
+        <thead>
+          <tr>
+            <th>تحديد</th>
+            <th>اسم الطالب</th>
+            <th>نوع النموذج</th>
+            <th>اسم النموذج</th>
+            <th>تحميل</th>
+            <th>تاريخ الأصدار</th>
+            <th>المرحلة</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td> <input type="checkbox"> </td>
+            <td>
+              <a href="./certificate.html" style="color:#000"> أحمد يسري </a>
+            </td>
+            <td class="name_">
+                نموذج 1
+            </td>
+            <td>نوع نموذج 1</td>
+            <td> <button> <img src="../../assets/images/download-cloud.svg" alt="download"> </button> </td>
+            <td>27-11-2020</td>
+            <td> 
+                مرحلة 1
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+    </div>
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/datatable.js"></script>
+
+
+    <script>
+      $(document).ready(function () {
+        var table = $("#example").DataTable({
+          dom:
+            "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+            "<'row'<'col-sm-12 table_layout'tr>>" +
+            "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+          lengthMenu: [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"],
+          ],
+          responsive: true,
+          language: {
+            search: "_INPUT_",
+            searchPlaceholder: "بحث",
+            lengthMenu: "_MENU_",
+            paginate: {
+              first: "الأول",
+              last: "الأخير",
+              next: "التالي",
+              previous: "السابق",
+            },
+          },
+        });
+        $(".dataTables_filter input").addClass("form-control");
+        $(".dataTables_length select").addClass("form-select");
+      });
+    </script>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const operationBtn = document.querySelector('.operation_');
+          const operationsBtns = document.querySelector('.operations__btns');
+        
+          // Show/Hide operations__btns when clicking operation_ button
+          operationBtn.addEventListener('click', function(event) {
+            operationsBtns.style.display = (operationsBtns.style.display === 'block') ? 'none' : 'block';
+            event.stopPropagation();
+          });
+        
+          // Hide operations__btns when clicking outside of it
+          document.addEventListener('click', function(event) {
+            const isClickInside = operationsBtns.contains(event.target) || operationBtn.contains(event.target);
+            if (!isClickInside) {
+              operationsBtns.style.display = 'none';
+            }
+          });
+        });
+      </script>
+  </body>
+</html>

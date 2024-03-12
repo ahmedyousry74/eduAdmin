@@ -241,3 +241,61 @@ input[type="checkbox"]:checked {
         display: none;
     }
 }
+.certificate__layout{
+    border: 15px solid red;
+    width: 100%;
+    padding: 0 20px;
+    height: 800px;
+    border-image: linear-gradient(to right, $second-color, $fifth-color);
+    border-image-slice: 1;
+    .certificate_header{
+        h2{
+            font-weight: 600;
+            font-size: 35px;
+            color: $primary-color;
+        }
+        span{
+            color: $primary-color;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+    .certificate__content{
+        h4{
+            font-size: 20px;
+            font-weight: 500;
+            color: $primary-color;
+        }
+        span{
+            font-weight: 600;
+            font-size: 55px;
+            color: $primary-color;
+        }
+    }
+    .certificate__info{
+        p{
+            color: $fifth-color;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+    .certificate__signture{
+        .certificate__right,.certificate__left{
+            position: relative;
+            span{
+                color: $primary-color;
+                font-size: 24px;
+                font-weight: 600;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    background-color: $fifth-color;
+                    height: 1px;
+                    width: 100%;
+                    right: 0;
+                    top: 60px;
+                }
+            }
+        }
+    }
+}

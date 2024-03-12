@@ -246,6 +246,58 @@ input[type=checkbox]:checked {
   display: none;
 }
 
+.certificate__layout {
+  border: 15px solid red;
+  width: 100%;
+  padding: 0 20px;
+  height: 800px;
+  -o-border-image: linear-gradient(to right, #DA3837, #636363);
+     border-image: linear-gradient(to right, #DA3837, #636363);
+  border-image-slice: 1;
+}
+.certificate__layout .certificate_header h2 {
+  font-weight: 600;
+  font-size: 35px;
+  color: #050505;
+}
+.certificate__layout .certificate_header span {
+  color: #050505;
+  font-size: 20px;
+  font-weight: 500;
+}
+.certificate__layout .certificate__content h4 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #050505;
+}
+.certificate__layout .certificate__content span {
+  font-weight: 600;
+  font-size: 55px;
+  color: #050505;
+}
+.certificate__layout .certificate__info p {
+  color: #636363;
+  font-size: 16px;
+  font-weight: 500;
+}
+.certificate__layout .certificate__signture .certificate__right, .certificate__layout .certificate__signture .certificate__left {
+  position: relative;
+}
+.certificate__layout .certificate__signture .certificate__right span, .certificate__layout .certificate__signture .certificate__left span {
+  color: #050505;
+  font-size: 24px;
+  font-weight: 600;
+}
+.certificate__layout .certificate__signture .certificate__right span:after, .certificate__layout .certificate__signture .certificate__left span:after {
+  position: absolute;
+  content: "";
+  background-color: #636363;
+  height: 1px;
+  width: 100%;
+  right: 0;
+  top: 60px;
+}
+
 aside {
   padding: 10px 20px;
   background-color: #F9FAFB;
