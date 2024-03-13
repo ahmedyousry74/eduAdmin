@@ -309,7 +309,7 @@
       class="header__page d-flex justify-content-between align-items-start flex-row flex-wrap w-100"
     >
       <div class="title_page">
-        <h2>الشهادات</h2>
+        <h2>كل النماذج</h2>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -319,7 +319,7 @@
               القسم الإداري
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-              الشهادات
+              كل النماذج
             </li>
           </ol>
         </nav>
@@ -327,28 +327,12 @@
       <div
         class="actions_page d-flex justify-content-start align-otems-center flex-row gap-2 flex-wrap"
       >
-        <a href="./forms.html"> كل النماذج </a>
-        <a href="./add-cetificate.html" class="add_student">
-          <span> إضافة شهادة </span>
+        <a href="./add-form.html" class="add_student"> اضافة نموذج </a>
         </a>
       </div>
     </div>
     <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
       <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
-        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-          <label for=""> اسم الطالب </label>
-          <select
-            name="schools"
-            id="schools"
-            class="form-select form-control"
-          >
-            <option selected disabled>اسم الطالب</option>
-            <option value="">طالب 1</option>
-            <option value="">طالب 2</option>
-            <option value="">طالب 3</option>
-            <option value="">طالب 4</option>
-          </select>
-        </div>
         <div class="d-flex justify-content-start align-items-start flex-column gap-1">
           <label for=""> اسم النموذج </label>
           <select
@@ -386,29 +370,25 @@
         <thead>
           <tr>
             <th>تحديد</th>
-            <th>اسم الطالب</th>
-            <th>نوع النموذج</th>
             <th>اسم النموذج</th>
-            <th>تحميل</th>
-            <th>تاريخ الأصدار</th>
             <th>المرحلة</th>
+            <th>نموذج لـ</th>
+            <th>عمليات</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td> <input type="checkbox"> </td>
             <td>
-              <a href="./certificate.html" style="color:#000"> أحمد يسري </a>
+              اسم النموذج
             </td>
             <td class="name_">
-                نموذج 1
-            </td>
-            <td>نوع نموذج 1</td>
-            <td> <button> <img src="../../assets/images/download-cloud.svg" alt="download"> </button> </td>
-            <td>27-11-2020</td>
-            <td> 
                 مرحلة 1
             </td>
+            <td>طالب</td>
+            <td class="actions">
+              <button > <img src="../../assets/images/trash.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
+            </td>  
           </tr>
         </tbody>
       </table>
