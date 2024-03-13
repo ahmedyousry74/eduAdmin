@@ -366,6 +366,7 @@
                                 </select>                            
                                 </div>
                             </div>
+                            <textarea id="editor"></textarea>
                         </div>
                         <div class="btn__save">
                             <button>حفظ</button>
@@ -382,6 +383,32 @@
     <script src="../../assets/js/datatable.js"></script>
     <script src="https://cdn.ckeditor.com/4.24.1/standard/ckeditor.js"></script>
 
-
+    <script>
+      // Initialize CKEditor with the required plugins
+      ClassicEditor
+          .create(document.querySelector('#editor'), {
+              // Specify the plugins you want to include
+              plugins: [
+                  'Link',
+                  'CKFinder',
+                  'EasyImage'
+                  // Add more plugins as needed
+              ],
+              // Configuration for the plugins, if required
+              // For example:
+              ckfinder: {
+                  // Configuration options for CKFinder plugin
+              },
+              easyImage: {
+                  // Configuration options for Easy Image plugin
+              }
+          })
+          .then(editor => {
+              console.log('Editor was initialized', editor);
+          })
+          .catch(error => {
+              console.error(error);
+          });
+  </script>
   </body>
 </html>
