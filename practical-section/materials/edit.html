@@ -12,6 +12,26 @@
     <link rel="stylesheet" href="../../assets/css/datatable.css" />
     <title>EDU ADMIN</title>
     <link rel="icon" href="../../assets/images/logo.png" type="image/x-icon" />
+    <style>
+      #pills-books a{
+        background: #fff;
+        border: 1px solid #DBDBDB;
+        padding: 8px 25px;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px;
+        color: #050505;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        height: 48px;
+        transition: 0.3s ease-in-out all;
+        width: 150px;
+      }
+    </style>
   </head>
   <body>
     <div
@@ -354,13 +374,13 @@
               <button class="nav-link" id="pills-books-tab" data-bs-toggle="pill" data-bs-target="#pills-books" type="button" role="tab" aria-controls="pills-books" aria-selected="true">الكتب</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-parents-tab" data-bs-toggle="pill" data-bs-target="#pills-parents" type="button" role="tab" aria-controls="pills-parents" aria-selected="true">الأختبارات و الواجبات</button>
+              <button class="nav-link" id="pills-exams-tab" data-bs-toggle="pill" data-bs-target="#pills-exams" type="button" role="tab" aria-controls="pills-parents" aria-selected="true">الأختبارات و الواجبات</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-grade-tab" data-bs-toggle="pill" data-bs-target="#pills-grade" type="button" role="tab" aria-controls="pills-grade" aria-selected="true">المواد المساعدة</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="pills-exams-tab" data-bs-toggle="pill" data-bs-target="#pills-exams" type="button" role="tab" aria-controls="pills-exams" aria-selected="true">الشعب</button>
+              <button class="nav-link" id="pills-division-tab" data-bs-toggle="pill" data-bs-target="#pills-division" type="button" role="tab" aria-controls="pills-division" aria-selected="true">الشعب</button>
             </li>
           </ul>
           <div class="tab-content form__details" id="pills-tabContent">
@@ -413,12 +433,138 @@
                                 <span> اضغط او قم بالسحب </span>
                                 <p>png, jpg, jpeg (max. 800x400px)</p>
                             </div>
-                          </div>
-                      <div class="btn__save">
-                        <button>حفظ</button>
-                      </div>
+                        </div>
+                        <div class="btn__save">
+                          <button>حفظ</button>
+                        </div>
+                  </div>
                 </form>
+              </div>
+              </div>
             </div>
+            <div class="tab-pane fade" id="pills-books" role="tabpanel" aria-labelledby="pills-books-tab" tabindex="0">
+              <a href="../books/add.html"> إضافة كتاب </a>
+                <table id="booksTable" class="display" style="width: 100%">
+                  <thead>
+                    <tr>
+                      <th>اسم الكتاب</th>
+                      <th>الصورة</th>
+                      <th> معاينة</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>كتاب 1</td>
+                      <td>نوع</td>
+
+                      <td class="actions">
+                        <button > <img src="../../assets/images/eye.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
+                      </td>  
+                    </tr>
+                  </tbody>
+                </table>
+          
+              </div>
+              <div class="tab-pane fade" id="pills-exams" role="tabpanel" aria-labelledby="pills-exams-tab" tabindex="0">
+                <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
+                    <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
+                      <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                        <label for=""> المراحل الدراسية </label>
+                        <select
+                          name="class"
+                          id="class"
+                          class="form-select form-control"
+                          aria-label="Default select example"
+                          aria-placeholder="Segmentation*"
+                        >
+                          <option selected disabled>المراحل الدراسية</option>
+                          <option value="">مرحلة 1</option>
+                          <option value="">مرحلة 2</option>
+                          <option value="">مرحلة 3</option>
+                          <option value="">مرحلة 4</option>
+                        </select>
+                      </div>
+                      <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                        <label for=""> الفصول الدراسية </label>
+                        <select
+                          name="class"
+                          id="class"
+                          class="form-select form-control"
+                        >
+                          <option selected disabled>الفصول الدراسية</option>
+                          <option value="test">فصل 1</option>
+                          <option value="">فصل 2</option>
+                          <option value="">فصل 3</option>
+                          <option value="">فصل 4</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="filter_btn">
+                      <button type="submit"> فلتر </button>
+                    </div>
+                  </form>
+                  <table id="examsTable" class="display" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th>اسم الاختبار</th>
+                        <th>المرحلة</th>
+                        <th>الفصل الدراسي</th>
+                        <th>تاريخ الأنشاء</th>
+                        <th>اسم المدرس</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>اختبار 1</td>
+                        <td>مرحلة 1</td>
+                        <td>فصل 1</td>
+                        <td>27-11-2020</td>
+                        <td>مدرس 1</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+              <div class="tab-pane fade" id="pills-grade" role="tabpanel" aria-labelledby="pills-grade-tab" tabindex="0">
+                  <table id="gradeTable" class="display" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th>الاسم</th>
+                        <th>اسم المدرس</th>
+                        <th>تاريخ الأنشاء</th>
+                        <th>تحميل</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td> مادة مساعدة 1 </td>
+                        <td> مدرس 1 </td>
+                        <td> 27-11-2020 </td>
+                        <td> <img
+                          src="../../assets/images/download-cloud.svg"
+                          alt="print"
+                          width="20"
+                          height="20"
+                          loading="lazy"
+                        /> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            <div class="tab-pane fade" id="pills-division" role="tabpanel" aria-labelledby="pills-division-tab" tabindex="0">
+              <table id="divisionTable" class="display" style="width: 100%">
+                <thead>
+                  <tr>
+                    <th>اسم الشعبة</th>
+                    <th>اسم المدرس</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> شعبة 1 </td>
+                    <td> مدرس 1 </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
       </div>
@@ -427,6 +573,120 @@
     <script src="../../assets/js/jquery.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/datatable.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        var table = $("#booksTable").DataTable({
+          dom:
+            "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+            "<'row'<'col-sm-12 table_layout'tr>>" +
+            "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+          lengthMenu: [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"],
+          ],
+          responsive: true,
+          language: {
+            search: "_INPUT_",
+            searchPlaceholder: "بحث",
+            lengthMenu: "_MENU_",
+            paginate: {
+              first: "الأول",
+              last: "الأخير",
+              next: "التالي",
+              previous: "السابق",
+            },
+          },
+        });
+        $(".dataTables_filter input").addClass("form-control");
+        $(".dataTables_length select").addClass("form-select");
+      });
+    </script>
+
+<script>
+  $(document).ready(function () {
+    var table = $("#examsTable").DataTable({
+      dom:
+        "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+        "<'row'<'col-sm-12 table_layout'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+      lengthMenu: [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"],
+      ],
+      responsive: true,
+      language: {
+        search: "_INPUT_",
+        searchPlaceholder: "بحث",
+        lengthMenu: "_MENU_",
+        paginate: {
+          first: "الأول",
+          last: "الأخير",
+          next: "التالي",
+          previous: "السابق",
+        },
+      },
+    });
+    $(".dataTables_filter input").addClass("form-control");
+    $(".dataTables_length select").addClass("form-select");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    var table = $("#gradeTable").DataTable({
+      dom:
+        "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+        "<'row'<'col-sm-12 table_layout'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+      lengthMenu: [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"],
+      ],
+      responsive: true,
+      language: {
+        search: "_INPUT_",
+        searchPlaceholder: "بحث",
+        lengthMenu: "_MENU_",
+        paginate: {
+          first: "الأول",
+          last: "الأخير",
+          next: "التالي",
+          previous: "السابق",
+        },
+      },
+    });
+    $(".dataTables_filter input").addClass("form-control");
+    $(".dataTables_length select").addClass("form-select");
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    var table = $("#divisionTable").DataTable({
+      dom:
+        "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+        "<'row'<'col-sm-12 table_layout'tr>>" +
+        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+      lengthMenu: [
+        [5, 10, 25, 50, -1],
+        [5, 10, 25, 50, "All"],
+      ],
+      responsive: true,
+      language: {
+        search: "_INPUT_",
+        searchPlaceholder: "بحث",
+        lengthMenu: "_MENU_",
+        paginate: {
+          first: "الأول",
+          last: "الأخير",
+          next: "التالي",
+          previous: "السابق",
+        },
+      },
+    });
+    $(".dataTables_filter input").addClass("form-control");
+    $(".dataTables_length select").addClass("form-select");
+  });
+</script>
 
   </body>
 </html>
