@@ -366,9 +366,11 @@
                                 </select>                            
                                 </div>
                             </div>
-                            <textarea id="editor"></textarea>
-                        </div>
-                        <div class="btn__save">
+                            <div class="col-md-12">
+                              <textarea id="editor1"></textarea>
+                            </div>
+                          </div>
+                        <div class="btn__save mt-2">
                             <button>حفظ</button>
                         </div>
                     </form>
@@ -379,36 +381,14 @@
     </div>
 
     <script src="../../assets/js/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/datatable.js"></script>
-    <script src="https://cdn.ckeditor.com/4.24.1/standard/ckeditor.js"></script>
-
+    <script src="https://cdn.ckeditor.com/4.20.0/standard/ckeditor.js"></script>
     <script>
-      // Initialize CKEditor with the required plugins
-      ClassicEditor
-          .create(document.querySelector('#editor'), {
-              // Specify the plugins you want to include
-              plugins: [
-                  'Link',
-                  'CKFinder',
-                  'EasyImage'
-                  // Add more plugins as needed
-              ],
-              // Configuration for the plugins, if required
-              // For example:
-              ckfinder: {
-                  // Configuration options for CKFinder plugin
-              },
-              easyImage: {
-                  // Configuration options for Easy Image plugin
-              }
-          })
-          .then(editor => {
-              console.log('Editor was initialized', editor);
-          })
-          .catch(error => {
-              console.error(error);
-          });
-  </script>
+      $(document).ready(function() {
+        CKEDITOR.replace('editor1');
+      });
+      </script>
   </body>
 </html>
