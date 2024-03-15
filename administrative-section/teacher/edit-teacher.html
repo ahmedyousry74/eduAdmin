@@ -321,6 +321,9 @@
                 <button class="nav-link" id="pills-division-tab" data-bs-toggle="pill" data-bs-target="#pills-division" type="button" role="tab" aria-controls="pills-division" aria-selected="true">المادة</button>
               </li>
               <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-helpers-tab" data-bs-toggle="pill" data-bs-target="#pills-helpers" type="button" role="tab" aria-controls="pills-helpers" aria-selected="true">المواد المساعدة</button>
+              </li>
+              <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-table-tab" data-bs-toggle="pill" data-bs-target="#pills-table" type="button" role="tab" aria-controls="pills-table" aria-selected="true">جدول الدوام</button>
               </li>
               <li class="nav-item" role="presentation">
@@ -516,176 +519,254 @@
                         </tr>
                       </tbody>
                     </table>
-              </div>
-                <div class="tab-pane fade" id="pills-duties" role="tabpanel" aria-labelledby="pills-duties-tab" tabindex="0">
-                  <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
-                      <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for=""> المادة </label>
-                          <select
-                            name="schools"
-                            id="schools"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>المدارس</option>
-                            <option value="">مادة 1</option>
-                            <option value="">مادة 2</option>
-                            <option value="">مادة 3</option>
-                            <option value="">مادة 4</option>
-                          </select>
+                </div>
+                  <div class="tab-pane fade" id="pills-duties" role="tabpanel" aria-labelledby="pills-duties-tab" tabindex="0">
+                    <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
+                        <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> المادة </label>
+                            <select
+                              name="schools"
+                              id="schools"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>المدارس</option>
+                              <option value="">مادة 1</option>
+                              <option value="">مادة 2</option>
+                              <option value="">مادة 3</option>
+                              <option value="">مادة 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> المراحل الدراسية </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                              aria-label="Default select example"
+                              aria-placeholder="Segmentation*"
+                            >
+                              <option selected disabled>المراحل الدراسية</option>
+                              <option value="">مرحلة 1</option>
+                              <option value="">مرحلة 2</option>
+                              <option value="">مرحلة 3</option>
+                              <option value="">مرحلة 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> الفصول الدراسية </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>الفصول الدراسية</option>
+                              <option value="test">فصل 1</option>
+                              <option value="">فصل 2</option>
+                              <option value="">فصل 3</option>
+                              <option value="">فصل 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for="">الشعبة </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>الشعبة</option>
+                              <option value="test">شعبة 1</option>
+                              <option value="">شعبة 2</option>
+                              <option value="">شعبة 3</option>
+                              <option value="">شعبة 4</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for=""> المراحل الدراسية </label>
-                          <select
-                            name="class"
-                            id="class"
-                            class="form-select form-control"
-                            aria-label="Default select example"
-                            aria-placeholder="Segmentation*"
-                          >
-                            <option selected disabled>المراحل الدراسية</option>
-                            <option value="">مرحلة 1</option>
-                            <option value="">مرحلة 2</option>
-                            <option value="">مرحلة 3</option>
-                            <option value="">مرحلة 4</option>
-                          </select>
+                        <div class="filter_btn">
+                          <button type="submit"> فلتر </button>
                         </div>
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for=""> الفصول الدراسية </label>
-                          <select
-                            name="class"
-                            id="class"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>الفصول الدراسية</option>
-                            <option value="test">فصل 1</option>
-                            <option value="">فصل 2</option>
-                            <option value="">فصل 3</option>
-                            <option value="">فصل 4</option>
-                          </select>
+                      </form>
+                      <table id="dutiesTable" class="display" style="width: 100%">
+                        <thead>
+                          <tr>
+                            <th>اسم الأختبار</th>
+                            <th>المرحلة</th>
+                            <th>الفصل الدراسي</th>
+                            <th>الشعبة</th>
+                            <th>المادة</th>
+                            <th>تاريخ الأنشاء</th>
+                            <th>عمليات</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>اختبار 1</td>
+                            <td>مرحلة 1</td>
+                            <td>فصل 1</td>
+                            <td>شعبة 1</td>
+                            <td>مادة 1</td>
+                            <td>27-11-2020</td>
+                            <td class="actions">
+                              <button > <img src="../../assets/images/trash.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
+                            </td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                  <div class="tab-pane fade" id="pills-division" role="tabpanel" aria-labelledby="pills-division-tab" tabindex="0">
+                    <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
+                        <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
+                          
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> المراحل الدراسية </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                              aria-label="Default select example"
+                              aria-placeholder="Segmentation*"
+                            >
+                              <option selected disabled>المراحل الدراسية</option>
+                              <option value="">مرحلة 1</option>
+                              <option value="">مرحلة 2</option>
+                              <option value="">مرحلة 3</option>
+                              <option value="">مرحلة 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> الفصول الدراسية </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>الفصول الدراسية</option>
+                              <option value="test">فصل 1</option>
+                              <option value="">فصل 2</option>
+                              <option value="">فصل 3</option>
+                              <option value="">فصل 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for="">الشعبة </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>الشعبة</option>
+                              <option value="test">شعبة 1</option>
+                              <option value="">شعبة 2</option>
+                              <option value="">شعبة 3</option>
+                              <option value="">شعبة 4</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for="">الشعبة </label>
-                          <select
-                            name="class"
-                            id="class"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>الشعبة</option>
-                            <option value="test">شعبة 1</option>
-                            <option value="">شعبة 2</option>
-                            <option value="">شعبة 3</option>
-                            <option value="">شعبة 4</option>
-                          </select>
+                        <div class="filter_btn">
+                          <button type="submit"> فلتر </button>
                         </div>
-                      </div>
-                      <div class="filter_btn">
-                        <button type="submit"> فلتر </button>
-                      </div>
-                    </form>
-                    <table id="dutiesTable" class="display" style="width: 100%">
-                      <thead>
-                        <tr>
-                          <th>اسم الأختبار</th>
-                          <th>المرحلة</th>
-                          <th>الفصل الدراسي</th>
-                          <th>الشعبة</th>
-                          <th>المادة</th>
-                          <th>تاريخ الأنشاء</th>
-                          <th>عمليات</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>اختبار 1</td>
-                          <td>مرحلة 1</td>
-                          <td>فصل 1</td>
-                          <td>شعبة 1</td>
-                          <td>مادة 1</td>
-                          <td>27-11-2020</td>
-                          <td class="actions">
-                            <button > <img src="../../assets/images/trash.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
-                          </td>                        
-                        </tr>
-                      </tbody>
-                    </table>
-              </div>
-                <div class="tab-pane fade" id="pills-division" role="tabpanel" aria-labelledby="pills-division-tab" tabindex="0">
-                  <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
-                      <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
-                        
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for=""> المراحل الدراسية </label>
-                          <select
-                            name="class"
-                            id="class"
-                            class="form-select form-control"
-                            aria-label="Default select example"
-                            aria-placeholder="Segmentation*"
-                          >
-                            <option selected disabled>المراحل الدراسية</option>
-                            <option value="">مرحلة 1</option>
-                            <option value="">مرحلة 2</option>
-                            <option value="">مرحلة 3</option>
-                            <option value="">مرحلة 4</option>
-                          </select>
+                      </form>
+                      <table id="divisionTable" class="display" style="width: 100%">
+                        <thead>
+                          <tr>
+                            <th>اسم المادة</th>
+                            <th> المرحلة الدراسية </th>
+                            <th>الفصل الدراسي</th>
+                            <th>الشعبة</th>
+                            <th>عمليات</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>مادة 1</td>
+                            <td>مرحلة 1</td>
+                            <td>فصل 1</td>
+                            <td>شعبة 1</td>
+                            <td class="actions">
+                              <button > <img src="../../assets/images/trash.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
+                            </td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                  <div class="tab-pane fade" id="pills-helpers" role="tabpanel" aria-labelledby="pills-helpers-tab" tabindex="0">
+                    <form class="filter__action w-100 flex-lg-nowrap flex-wrap gap-2">
+                        <div class="d-flex justify-content-start align-items-center flex-row gap-3 w-100  flex-lg-nowrap flex-wrap">
+                          
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> المراحل الدراسية </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                              aria-label="Default select example"
+                              aria-placeholder="Segmentation*"
+                            >
+                              <option selected disabled>المراحل الدراسية</option>
+                              <option value="">مرحلة 1</option>
+                              <option value="">مرحلة 2</option>
+                              <option value="">مرحلة 3</option>
+                              <option value="">مرحلة 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for=""> الفصول الدراسية </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>الفصول الدراسية</option>
+                              <option value="test">فصل 1</option>
+                              <option value="">فصل 2</option>
+                              <option value="">فصل 3</option>
+                              <option value="">فصل 4</option>
+                            </select>
+                          </div>
+                          <div class="d-flex justify-content-start align-items-start flex-column gap-1">
+                            <label for="">الشعبة </label>
+                            <select
+                              name="class"
+                              id="class"
+                              class="form-select form-control"
+                            >
+                              <option selected disabled>الشعبة</option>
+                              <option value="test">شعبة 1</option>
+                              <option value="">شعبة 2</option>
+                              <option value="">شعبة 3</option>
+                              <option value="">شعبة 4</option>
+                            </select>
+                          </div>
                         </div>
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for=""> الفصول الدراسية </label>
-                          <select
-                            name="class"
-                            id="class"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>الفصول الدراسية</option>
-                            <option value="test">فصل 1</option>
-                            <option value="">فصل 2</option>
-                            <option value="">فصل 3</option>
-                            <option value="">فصل 4</option>
-                          </select>
+                        <div class="filter_btn">
+                          <button type="submit"> فلتر </button>
                         </div>
-                        <div class="d-flex justify-content-start align-items-start flex-column gap-1">
-                          <label for="">الشعبة </label>
-                          <select
-                            name="class"
-                            id="class"
-                            class="form-select form-control"
-                          >
-                            <option selected disabled>الشعبة</option>
-                            <option value="test">شعبة 1</option>
-                            <option value="">شعبة 2</option>
-                            <option value="">شعبة 3</option>
-                            <option value="">شعبة 4</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="filter_btn">
-                        <button type="submit"> فلتر </button>
-                      </div>
-                    </form>
-                    <table id="divisionTable" class="display" style="width: 100%">
-                      <thead>
-                        <tr>
-                          <th>اسم المادة</th>
-                          <th> المرحلة الدراسية </th>
-                          <th>الفصل الدراسي</th>
-                          <th>الشعبة</th>
-                          <th>عمليات</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>مادة 1</td>
-                          <td>مرحلة 1</td>
-                          <td>فصل 1</td>
-                          <td>شعبة 1</td>
-                          <td class="actions">
-                            <button > <img src="../../assets/images/trash.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
-                          </td>                        
-                        </tr>
-                      </tbody>
-                    </table>
-              </div>
+                      </form>
+                      <table id="helpersTable" class="display" style="width: 100%">
+                        <thead>
+                          <tr>
+                            <th>اسم المادة المساعدة</th>
+                            <th>تاريخ الأنشاء</th>
+                            <th>مرحلة دراسية</th>
+                            <th>فصل دراسي</th>
+                            <th>الشعبة</th>
+                            <th>تحميل</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>مادة مساعدة</td>
+                            <td>27-11-2020</td>
+                            <td>مرحلة دراسية 1</td>
+                            <td>فصل دراسي 1</td>
+                            <td>شعبة 1</td>
+                            <td class="actions">
+                              <button > <img src="../../assets/images/download.svg" alt="trash" width="24" height="24" loading="lazy"> </button>
+                            </td>                        
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
                 <div class="tab-pane fade" id="pills-table" role="tabpanel" aria-labelledby="pills-table-tab" tabindex="0">
                   <div class="w-100">
                     <h2 class="mb-4"> جدول الدوام </h2>
@@ -986,6 +1067,34 @@
             <script>
               $(document).ready(function () {
                 var table = $("#divisionTable").DataTable({
+                  dom:
+                    "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+                    "<'row'<'col-sm-12 table_layout'tr>>" +
+                    "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                  lengthMenu: [
+                    [5, 10, 25, 50, -1],
+                    [5, 10, 25, 50, "All"],
+                  ],
+                  responsive: true,
+                  language: {
+                    search: "_INPUT_",
+                    searchPlaceholder: "بحث",
+                    lengthMenu: "_MENU_",
+                    paginate: {
+                      first: "الأول",
+                      last: "الأخير",
+                      next: "التالي",
+                      previous: "السابق",
+                    },
+                  },
+                });
+                $(".dataTables_filter input").addClass("form-control");
+                $(".dataTables_length select").addClass("form-select");
+              });
+            </script>
+            <script>
+              $(document).ready(function () {
+                var table = $("#helpersTable").DataTable({
                   dom:
                     "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
                     "<'row'<'col-sm-12 table_layout'tr>>" +
